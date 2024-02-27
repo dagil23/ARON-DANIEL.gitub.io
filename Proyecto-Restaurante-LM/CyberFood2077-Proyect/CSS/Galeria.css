@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.cdnfonts.com/css/whirly-birdie');
+
+
+body {
+  background: black;
+  font-family: 'Cyberpunk Is Not Dead', sans-serif;
+  background-image: url(/CyberFood2077-Proyect/Recursos/IMG/Gallery.jpg);
+  background-size: cover;
+  background-position: bottom;
+  backdrop-filter: blur(2px);
+  background-repeat: no-repeat;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  min-height: 20vh;
+}
+
+:root {
+  --primary-color: #BF2188;
+  --glitched-duration: 0.9s;
+  --second-color: #F22E76;
+  --third-color: #411D59;
+  --fourth-color: #F2A444;
+  --fifth--color: #42FBFD;
+  --sixth--color: #2F71AB;
+  --seventh--color: #1b2350;
+}
+
+
+/*/////////////////////CABECERA/////////////////////*/
+
+.header-fixed {
+  font-family: 'Cyberpunk Is Not Dead', sans-serif;
+  top: 0;
+  left: 0;
+  color: rgb(241, 241, 0);
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  padding: 20px 60px 0px 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 10;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 10px 3px var(--second-color)
+}
+
+div.logo-container {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-container .logo {
+  width: auto;
+  height: 200px;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  min-width: 50%;
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+.nav-list {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.nav-list a {
+  width: 100%;
+  margin: 15px;
+  border: 1px solid var(--second-color);
+  border-radius: 3px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 1.5px;
+  font-weight: 640;
+}
+
+.nav-list a li {
+  list-style: none;
+
+}
+
+.nav-list a:hover {
+  background: var(--fourth-color);
+  cursor: pointer;
+  color: black;
+  border-radius: 50px;
+  transition: border-radius 1s ease;
+}
+
+.nav-list a:focus {
+  outline: 0;
+  box-shadow: 0.5px -0.5px 6px 1px var(--fourth-color), -0.5px 1.5px 6px 1px var(--fourth-color);
+  transition: box-shadow 0.1s ease;
+}
+
+/*///////////////////// MAIN /////////////////////*/
+
+.principal {
+  min-height: 60vh;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-top: 5%;
+  padding: 1em;
+}
+
+.principal h1 {
+  color: var(--second-color);
+  -webkit-text-fill-color: var(--second-color);
+  -webkit-text-stroke: 1px black;
+  font-size: 30px;
+}
+.principal h2 {
+  font-family: 'Whirly Birdie', sans-serif;
+  color: var(--primary-color);
+  -webkit-text-fill-color: var(--primary-color);
+  -webkit-text-stroke: 1px black;
+  font-size: 30px;
+}
+
+.principal .Info{
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: x-large;
+}
+
+/*///////////////////// GALERÍA /////////////////////*/
+
+img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 1000ms;
+}
+
+ul {
+  list-style: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  max-width: 100%;
+  width: 70rem;
+}
+
+figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+figure::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(0, 0, 0, 0.5);
+  transform-origin: center;
+  opacity: 0;
+  transform: scale(2);
+  transition: opacity 300ms;
+}
+
+figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: var(--fourth-color);
+  font-size: 1.2rem;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 600ms, transform 600ms;
+}
+
+a:is(:hover, :focus) figure::after {
+  opacity: 2;
+}
+
+a:is(:hover, :focus) figcaption {
+  opacity: 2;
+  transition: opacity 700ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  figcaption {
+    transform: translate3d(0, 2rem, 0);
+  }
+
+  figure::after {
+    border-radius: 60%;
+    opacity: 1;
+    transform: scale(0);
+    transition: transform 700ms;
+  }
+
+  a:is(:hover, :focus) figure::after {
+    transform: scale(2);
+  }
+
+  a:is(:hover, :focus) figcaption {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 600ms 400ms, transform 600ms 400ms;
+  }
+
+  a:is(:hover, :focus) img {
+    transform: scale(1.2);
+  }
+}
+
+/*///////////////////// FOOTER /////////////////////*/
+
+footer {
+  margin-top: 40px;
+  min-height: 10vh;
+  width: 100%;
+  padding: 0;
+  position: relative;
+  background-color: rgba(191, 33, 136, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .social-media {
+  padding: 20px 50px 10px;
+}
+
+footer p {
+  justify-content: left;
+}
+
+footer ul{
+  list-style: none;
+  display: flex;
+}
+
+footer a{
+  text-decoration: none;
+  color: black;
+}
+
+footer ul li {
+  margin-right: 20px;
+  margin-left: 20%; 
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+footer .gg-home{
+  margin-top: 5px;
+}
+
+/*///////////////////// MEDIA /////////////////////*/
+
+@media screen and (min-width: 768px) {
+  .nav-list {
+     justify-content: flex-end; 
+  }
+  
+  .nav-list a {
+     margin: 0 20px; 
+  }
+
+  .principal {
+     margin-top: 10vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-list {
+     justify-content: space-evenly;
+  }
+
+  .nav-list a {
+     margin: 0 30px; 
+  }
+
+  .principal {
+     flex-direction: row; 
+     align-items: flex-start; 
+     margin-top: 5%; /
+  }
+
+  .principal .content1,
+  .principal .content2 {
+     width: 45%; 
+  }
+}

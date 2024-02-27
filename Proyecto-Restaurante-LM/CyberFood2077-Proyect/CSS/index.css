@@ -1,0 +1,256 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+@import url('https://fonts.cdnfonts.com/css/cyberpunk-is-not-dead');
+body {
+   background: black;
+   font-family: 'Cyberpunk Is Not Dead', sans-serif;
+   background-image: url(/CyberFood2077-Proyect/Recursos/IMG/index.jpg);
+   background-size: cover;
+   background-position: bottom;
+   backdrop-filter: blur(2px);
+   background-repeat: no-repeat;
+}
+
+header {
+   position: relative;
+   width: 100%;
+   min-height: 20vh;
+}
+
+:root {
+   --primary-color: #BF2188;
+   --glitched-duration: 0.9s;
+   --second-color: #F22E76;
+   --third-color: #411D59;
+   --fourth-color: #F2A444;
+   --fifth--color: #42FBFD;
+   --sixth--color: #2F71AB;
+   --seventh--color: #1B2350;
+
+}
+
+/*/////////////////////CABECERA/////////////////////*/
+
+.header-fixed {
+   top: 0;
+   left: 0;
+   color: rgb(241, 241, 0);
+   background-color: rgba(0, 0, 0, 0.6);
+   position: fixed;
+   padding: 20px 60px 0px 60px;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   z-index: 10;
+   box-sizing: border-box;
+   box-shadow: 0 -1px 10px 3px var(--primary-color)
+}
+
+div.logo-container {
+   margin: 5px;
+   display: flex;
+   justify-content: center;
+}
+
+.logo-container .logo {
+   width: auto;
+   height: 200px;
+   margin-top: 5px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+nav {
+   min-width: 50%;
+   margin: 5px;
+   box-sizing: border-box;
+}
+
+.nav-list {
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   list-style: none;
+}
+
+.nav-list a {
+   width: 100%;
+   margin: 20px;
+   border: 1px solid var(--primary-color);
+   border-radius: 3px;
+   padding: 10px;
+   text-align: center;
+   text-decoration: none;
+   color: inherit;
+   letter-spacing: 1.5px;
+   font-weight: 640;
+}
+
+.nav-list a li {
+   list-style: none;
+
+}
+
+.nav-list a:hover {
+   background: var(--fourth-color);
+   cursor: pointer;
+   color: black;
+   border-radius: 50px;
+   transition: border-radius 1s ease;
+}
+
+.nav-list a:focus {
+   outline: 0;
+   box-shadow: 0.5px -0.5px 6px 1px yellow, -0.5px 1.5px 6px 1px yellow;
+   transition: box-shadow 0.1s ease;
+}
+
+
+/*///////////////////// MAIN /////////////////////*/
+.principal {
+   min-height: 60vh;
+   display: flex;
+   justify-content: flex-start; 
+   align-items: flex-start; 
+   margin-top: 5%;                                           
+}
+
+.principal p {
+   color: var(--fifth--color);
+   text-shadow: 2px 2px 5px var(--third-color);
+}
+
+.principal h1 {
+   color: var(--fourth-color);
+   text-shadow: 2px 2px 5px var(--fifth--color);
+   -webkit-text-fill-color: var(--fourth-color); 
+   -webkit-text-stroke: 1px black;
+   font-size: 50px;
+}
+
+.principal h2 {
+   color: var(--fourth-color);
+   text-shadow: 2px 2px 5px var(--fifth--color);
+   -webkit-text-fill-color: var(--fourth-color); 
+   -webkit-text-stroke: 1px black;
+   font-size: 35px;
+}
+.principal .content1 {
+   background-color: rgba(191, 33, 136, 0.8);
+   clip-path: polygon(88% 0, 100% 55%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+   padding: 10px 20px 40px; 
+   height: 20%;
+   align-self: flex-start; 
+   margin-left: 5%; 
+   margin-right: 0;
+   margin-top: 2%; 
+}
+
+.principal .content2 {
+   background-color: rgba(191, 33, 136, 0.8);
+   clip-path: polygon(88% 0, 100% 55%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+   padding: 10px 20px 40px; 
+   height: 20%;
+   align-self: flex-end; 
+   margin-left: 4%; 
+   margin-right: 5%; 
+}
+
+.principal a{
+   text-decoration: none;
+   color: var(--seventh--color);
+   text-shadow: 2px 2px 5px var(--fourth-color);
+}
+
+/*///////////////////// FOOTER /////////////////////*/
+
+footer {
+   margin-top: 40px;
+   min-height: 10vh;
+   width: 100%;
+   padding: 0;
+   margin-top: 40px;
+   min-height: 10vh;
+   width: 100%;
+   padding: 0;
+   position: relative;
+   background-color: rgba(191, 33, 136, 0.9);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+ }
+ 
+ footer .social-media {
+   padding: 20px 50px 10px;
+ }
+ 
+ footer p {
+   justify-content: left;
+ }
+ 
+ footer ul{
+   list-style: none;
+   display: flex;
+ }
+ 
+ footer a{
+   text-decoration: none;
+   color: black;
+ }
+ 
+ footer ul li {
+   margin-right: 10em; /* Ajusta el espacio entre los elementos li */
+   margin-left: 10%; 
+ }
+ 
+ footer a:hover {
+   text-decoration: none;
+   color: black;
+ }
+ 
+ footer .gg-home{
+   margin-top: 5px;
+ }
+ 
+/*///////////////////// MEDIA /////////////////////*/
+
+ @media screen and (min-width: 768px) {
+   .nav-list {
+      justify-content: flex-end; 
+   }
+   
+   .nav-list a {
+      margin: 0 20px; 
+   }
+
+   .principal {
+      margin-top: 10vh;
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .nav-list {
+      justify-content: space-evenly;
+   }
+
+   .nav-list a {
+      margin: 0 30px; 
+   }
+
+   .principal {
+      flex-direction: row; 
+      align-items: flex-start; 
+      margin-top: 5%; /
+   }
+
+   .principal .content1,
+   .principal .content2 {
+      width: 45%; 
+   }
+}
